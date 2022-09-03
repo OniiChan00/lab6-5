@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script>
+    function gen() {
+      var a = document.getElementById("b1");
+      var b = document.getElementById("b2");
+      var c = document.getElementById("b3");
+   
+      var table = document.getElementById("tabl")
+      var tr = document.createElement("tr")
+
+      var td1 = document.createElement("td")
+      td1.innerHTML = a.value;
+      tr.appendChild(td1)
+      var td2 = document.createElement("td")
+      td2.innerHTML = b.value;
+      tr.appendChild(td2)
+      var td3 = document.createElement("td")
+      td3.innerHTML = c.value;
+      tr.appendChild(td3)
+      table.appendChild(tr)
+    }
+  </script>
+
+  <style>
+    table,
+    tr,
+    td,
+    th {
+      border-style: solid;
+    }
+  </style>
+  <title>replit</title>
+</head>
+
+<body>
+  <form action=gen()>
+    <label>ชื่อลูกค้า: </label>
+    <input type="text" id="b1">
+    </p>
+    <label>ที่อยู่: </label>
+    <input type="text" id="b2">
+    </p>
+    <label>โทรศัพท์บ้าน: </label>
+    <input type="text" id="b3">
+    </p>
+    <input type="button" onclick="gen()" value="Submit">
+  </form>
+
+  <table id="tabl">
+    <th>ชื่อลูกค้า</th>
+    <th>ที่อยู่</th>
+    <th>โทรศัพท์บ้าน</th>
+  </table>
+  </ul>
+</body>
+
+</html>
